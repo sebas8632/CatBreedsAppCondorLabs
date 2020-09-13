@@ -42,6 +42,10 @@
 		673DD58C250DE350003540A4 /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD58B250DE350003540A4 /* BreedTableViewCell.swift */; };
 		673DD58E250DE3A9003540A4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD58D250DE3A9003540A4 /* UIViewController+Extension.swift */; };
 		673DD590250DE408003540A4 /* BreedsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD58F250DE408003540A4 /* BreedsListViewModel.swift */; };
+		673DD592250DE672003540A4 /* BreedsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD591250DE672003540A4 /* BreedsRepository.swift */; };
+		673DD594250DE6BB003540A4 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD593250DE6BB003540A4 /* UseCase.swift */; };
+		673DD596250DE6DA003540A4 /* FetchBreedsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */; };
+		673DD599250DE736003540A4 /* DefaultBreedsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD598250DE736003540A4 /* DefaultBreedsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,10 @@
 		673DD58B250DE350003540A4 /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
 		673DD58D250DE3A9003540A4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		673DD58F250DE408003540A4 /* BreedsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewModel.swift; sourceTree = "<group>"; };
+		673DD591250DE672003540A4 /* BreedsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRepository.swift; sourceTree = "<group>"; };
+		673DD593250DE6BB003540A4 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBreedsUseCase.swift; sourceTree = "<group>"; };
+		673DD598250DE736003540A4 /* DefaultBreedsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBreedsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +309,7 @@
 		673DD55A250DDD6C003540A4 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				673DD597250DE721003540A4 /* BreedsRepository */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -335,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				673DD563250DDE00003540A4 /* Protocols */,
+				673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 		673DD563250DDE00003540A4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				673DD593250DE6BB003540A4 /* UseCase.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -349,6 +360,7 @@
 		673DD568250DDE7F003540A4 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				673DD591250DE672003540A4 /* BreedsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -489,6 +501,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		673DD597250DE721003540A4 /* BreedsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				673DD598250DE736003540A4 /* DefaultBreedsRepository.swift */,
+			);
+			path = BreedsRepository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -626,6 +646,7 @@
 				673DD554250DDC63003540A4 /* ProviderProtocol.swift in Sources */,
 				673DD58E250DE3A9003540A4 /* UIViewController+Extension.swift in Sources */,
 				673DD54A250DDBC0003540A4 /* URLRequest+Extension.swift in Sources */,
+				673DD599250DE736003540A4 /* DefaultBreedsRepository.swift in Sources */,
 				673DD53D250DDA7C003540A4 /* NetworkConstants.swift in Sources */,
 				673DD56D250DE02C003540A4 /* Coordinator.swift in Sources */,
 				673DD55D250DDD9A003540A4 /* GetBreedsService.swift in Sources */,
@@ -637,9 +658,11 @@
 				673DD543250DDB38003540A4 /* HTTPMethod.swift in Sources */,
 				673DD56F250DE050003540A4 /* AppCoordinator.swift in Sources */,
 				673DD556250DDC76003540A4 /* URLSessionProtocol.swift in Sources */,
+				673DD594250DE6BB003540A4 /* UseCase.swift in Sources */,
 				673DD571250DE07B003540A4 /* AppDIContainer.swift in Sources */,
 				673DD579250DE14F003540A4 /* HomeCoordinator.swift in Sources */,
 				673DD55F250DDDBE003540A4 /* GetBreedImageService.swift in Sources */,
+				673DD596250DE6DA003540A4 /* FetchBreedsUseCase.swift in Sources */,
 				673DD58A250DE313003540A4 /* BreedsListView.swift in Sources */,
 				673DD58C250DE350003540A4 /* BreedTableViewCell.swift in Sources */,
 				673DD54D250DDBF3003540A4 /* NetworkError.swift in Sources */,
@@ -648,6 +671,7 @@
 				673DD57B250DE1BF003540A4 /* HomeTabBarViewController.swift in Sources */,
 				673DD506250DD99A003540A4 /* AppDelegate.swift in Sources */,
 				673DD590250DE408003540A4 /* BreedsListViewModel.swift in Sources */,
+				673DD592250DE672003540A4 /* BreedsRepository.swift in Sources */,
 				673DD552250DDC31003540A4 /* ServiceProtocol.swift in Sources */,
 				673DD586250DE2A0003540A4 /* BreedsListCoordinator.swift in Sources */,
 			);

@@ -72,7 +72,7 @@ extension BreedsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard  let breeds = viewModel?.breeds else {errorManager(error: ApplicationError.appError); return }
         let breed = breeds[indexPath.row]
-        showLoading()
+      //TODO -  showLoading()
         coordinator?.coordinateToBreedDetail(breed: breed)
     }
 }
