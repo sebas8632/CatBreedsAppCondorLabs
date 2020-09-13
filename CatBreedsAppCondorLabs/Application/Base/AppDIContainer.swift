@@ -37,3 +37,27 @@ extension AppDIContainer {
         return DefaultBreedsRepository(sessionProvider: urlSessionProvider)
     }
 }
+
+//MARK: BreedsDetail Container
+
+extension AppDIContainer {
+
+    //MARK: View Model
+    
+    func makeBreedDetailViewModel() -> BreedDetailViewModel {
+        return BreedDetailViewModel(fetchBreedImageUseCase: makeFetchBreedImageUseCase())
+    }
+    
+    //MARK: Use Cases
+    
+    func makeFetchBreedImageUseCase() -> FetchBreedImageUseCase {
+        return FetchBreedImageUseCase(breedImageRepository: makeBreedImageRepository())
+    }
+    
+    //MARK: Repository
+    
+    func makeBreedImageRepository() -> BreedImagesRepository {
+        return DefaultBreedsImageRepository(sessionProvider: urlSessionProvider)
+    }
+    
+}

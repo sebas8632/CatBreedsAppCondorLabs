@@ -30,12 +30,14 @@ class BreedsListCoordinator: Coordinator {
         
         navigationController.pushViewController(breedsListViewController, animated: false)
     }
- 
+    
 }
 
 extension BreedsListCoordinator: BreedsListFlow {
     func coordinateToBreedDetail(breed: Breed) {
- 
+        let breedDetailCoordinator = BreedDetailCoordinator(navigationController: navigationController, diContainer: diContainer)
+        breedDetailCoordinator.breed = breed
+        coordinate(to: breedDetailCoordinator)
     }
     
     

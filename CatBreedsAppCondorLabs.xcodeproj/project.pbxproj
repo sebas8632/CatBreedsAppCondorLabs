@@ -46,6 +46,13 @@
 		673DD594250DE6BB003540A4 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD593250DE6BB003540A4 /* UseCase.swift */; };
 		673DD596250DE6DA003540A4 /* FetchBreedsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */; };
 		673DD599250DE736003540A4 /* DefaultBreedsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD598250DE736003540A4 /* DefaultBreedsRepository.swift */; };
+		673DD59B250DEB70003540A4 /* BreedDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD59A250DEB70003540A4 /* BreedDetailCoordinator.swift */; };
+		673DD59D250DEBA6003540A4 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD59C250DEBA6003540A4 /* BreedDetailViewController.swift */; };
+		673DD59F250DEBC9003540A4 /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD59E250DEBC9003540A4 /* BreedDetailView.swift */; };
+		673DD5A1250DEBE7003540A4 /* BreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A0250DEBE7003540A4 /* BreedDetailViewModel.swift */; };
+		673DD5A3250DED6B003540A4 /* BreedImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A2250DED6B003540A4 /* BreedImagesRepository.swift */; };
+		673DD5A5250DEDAC003540A4 /* FetchBreedImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */; };
+		673DD5A8250DEDFE003540A4 /* DefaultBreedsImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +118,13 @@
 		673DD593250DE6BB003540A4 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBreedsUseCase.swift; sourceTree = "<group>"; };
 		673DD598250DE736003540A4 /* DefaultBreedsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBreedsRepository.swift; sourceTree = "<group>"; };
+		673DD59A250DEB70003540A4 /* BreedDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailCoordinator.swift; sourceTree = "<group>"; };
+		673DD59C250DEBA6003540A4 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		673DD59E250DEBC9003540A4 /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		673DD5A0250DEBE7003540A4 /* BreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewModel.swift; sourceTree = "<group>"; };
+		673DD5A2250DED6B003540A4 /* BreedImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesRepository.swift; sourceTree = "<group>"; };
+		673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBreedImageUseCase.swift; sourceTree = "<group>"; };
+		673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBreedsImageRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +323,7 @@
 		673DD55A250DDD6C003540A4 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5A6250DEDE6003540A4 /* BreedImagesRepository */,
 				673DD597250DE721003540A4 /* BreedsRepository */,
 			);
 			path = Repositories;
@@ -345,6 +360,7 @@
 			children = (
 				673DD563250DDE00003540A4 /* Protocols */,
 				673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */,
+				673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -361,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				673DD591250DE672003540A4 /* BreedsRepository.swift */,
+				673DD5A2250DED6B003540A4 /* BreedImagesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -483,6 +500,7 @@
 		673DD582250DE238003540A4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5A0250DEBE7003540A4 /* BreedDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -490,6 +508,8 @@
 		673DD583250DE23E003540A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				673DD59C250DEBA6003540A4 /* BreedDetailViewController.swift */,
+				673DD59E250DEBC9003540A4 /* BreedDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,6 +517,7 @@
 		673DD584250DE241003540A4 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				673DD59A250DEB70003540A4 /* BreedDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -507,6 +528,14 @@
 				673DD598250DE736003540A4 /* DefaultBreedsRepository.swift */,
 			);
 			path = BreedsRepository;
+			sourceTree = "<group>";
+		};
+		673DD5A6250DEDE6003540A4 /* BreedImagesRepository */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */,
+			);
+			path = BreedImagesRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,12 +676,16 @@
 				673DD58E250DE3A9003540A4 /* UIViewController+Extension.swift in Sources */,
 				673DD54A250DDBC0003540A4 /* URLRequest+Extension.swift in Sources */,
 				673DD599250DE736003540A4 /* DefaultBreedsRepository.swift in Sources */,
+				673DD5A5250DEDAC003540A4 /* FetchBreedImageUseCase.swift in Sources */,
+				673DD59F250DEBC9003540A4 /* BreedDetailView.swift in Sources */,
 				673DD53D250DDA7C003540A4 /* NetworkConstants.swift in Sources */,
 				673DD56D250DE02C003540A4 /* Coordinator.swift in Sources */,
 				673DD55D250DDD9A003540A4 /* GetBreedsService.swift in Sources */,
 				673DD558250DDC8D003540A4 /* URLSessionProvider.swift in Sources */,
 				673DD588250DE2EE003540A4 /* BreedsListViewController.swift in Sources */,
 				673DD50A250DD99A003540A4 /* ViewController.swift in Sources */,
+				673DD5A8250DEDFE003540A4 /* DefaultBreedsImageRepository.swift in Sources */,
+				673DD5A1250DEBE7003540A4 /* BreedDetailViewModel.swift in Sources */,
 				673DD548250DDB9F003540A4 /* URLComponents+Extension.swift in Sources */,
 				673DD573250DE0BE003540A4 /* ApplicationError.swift in Sources */,
 				673DD543250DDB38003540A4 /* HTTPMethod.swift in Sources */,
@@ -662,7 +695,9 @@
 				673DD571250DE07B003540A4 /* AppDIContainer.swift in Sources */,
 				673DD579250DE14F003540A4 /* HomeCoordinator.swift in Sources */,
 				673DD55F250DDDBE003540A4 /* GetBreedImageService.swift in Sources */,
+				673DD59D250DEBA6003540A4 /* BreedDetailViewController.swift in Sources */,
 				673DD596250DE6DA003540A4 /* FetchBreedsUseCase.swift in Sources */,
+				673DD5A3250DED6B003540A4 /* BreedImagesRepository.swift in Sources */,
 				673DD58A250DE313003540A4 /* BreedsListView.swift in Sources */,
 				673DD58C250DE350003540A4 /* BreedTableViewCell.swift in Sources */,
 				673DD54D250DDBF3003540A4 /* NetworkError.swift in Sources */,
@@ -670,6 +705,7 @@
 				673DD565250DDE14003540A4 /* Breed.swift in Sources */,
 				673DD57B250DE1BF003540A4 /* HomeTabBarViewController.swift in Sources */,
 				673DD506250DD99A003540A4 /* AppDelegate.swift in Sources */,
+				673DD59B250DEB70003540A4 /* BreedDetailCoordinator.swift in Sources */,
 				673DD590250DE408003540A4 /* BreedsListViewModel.swift in Sources */,
 				673DD592250DE672003540A4 /* BreedsRepository.swift in Sources */,
 				673DD552250DDC31003540A4 /* ServiceProtocol.swift in Sources */,
