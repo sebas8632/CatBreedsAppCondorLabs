@@ -9,13 +9,14 @@
 import UIKit
 
 class LikesViewController: UIViewController {
-
+    
     unowned var likesView: LikesView { return self.view as! LikesView }
     unowned var imageView : UIImageView { return likesView.imageView }
     unowned var unlikeImage : UIImageView { return likesView.unlikeImage }
     unowned var likeImage : UIImageView { return likesView.likeImage }
-
+    
     var coordinator: LikesCoordinator?
+    var likesViewModel: LikesViewModel?
     
     override func loadView() {
         self.view = LikesView(frame: UIScreen.main.bounds)
@@ -24,25 +25,45 @@ class LikesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Likes"
+        likesViewModel?.delegate = self
         configTargets()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getImages()
+
     }
     
     private func configTargets() {
-          let tapUnlike = UITapGestureRecognizer(target: self, action: #selector(tapUnlikeAction))
+        let tapUnlike = UITapGestureRecognizer(target: self, action: #selector(tapUnlikeAction))
         let taplike = UITapGestureRecognizer(target: self, action: #selector(tapLikeAction))
-
-          unlikeImage.addGestureRecognizer(tapUnlike)
+        
+        unlikeImage.addGestureRecognizer(tapUnlike)
         likeImage.addGestureRecognizer(taplike)
-      }
-      
-      @objc func tapUnlikeAction() {
+    }
+    
+    @objc func tapUnlikeAction() {
         print("UNLIKE")
-      }
+    }
     
     @objc func tapLikeAction() {
         print("LIKE")
-
     }
+    
+    private func getImages() {
+        likesViewModel?.getImagesRandom()
+    }
+    
+}
 
+
+extension LikesViewController: LikesViewModelDelegate {
+    func showImage(url: String) {
+        let url = URL(string: url)
+        
+        DispatchQueue.main.async {
+            self.imageView.kf.setImage(with: url)
+        }
+    }
 }

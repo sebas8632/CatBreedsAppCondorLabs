@@ -61,3 +61,22 @@ extension AppDIContainer {
     }
     
 }
+
+//MARK: Likes Container
+
+extension AppDIContainer {
+    
+    //MARK: View Model
+    
+    func makeLikesViewModel() -> LikesViewModel {
+        return LikesViewModel(fetchBreedImagesRandomUseCase: makeFetchBreedImagesRandomUseCase())
+    }
+    
+    //MARK: Use Cases
+    
+    func makeFetchBreedImagesRandomUseCase() -> FetchBreedImagesRandomUseCase {
+        return FetchBreedImagesRandomUseCase(breedImageRepository: makeBreedImageRepository())
+    }
+    
+}
+

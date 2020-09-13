@@ -22,6 +22,7 @@ class LikesCoordinator: Coordinator {
     func start() {
         let likesViewControlleer = LikesViewController()
               likesViewControlleer.coordinator = self
+        likesViewControlleer.likesViewModel = diContainer.makeLikesViewModel()
               navigationController.pushViewController(likesViewControlleer, animated: false)
     }
 }

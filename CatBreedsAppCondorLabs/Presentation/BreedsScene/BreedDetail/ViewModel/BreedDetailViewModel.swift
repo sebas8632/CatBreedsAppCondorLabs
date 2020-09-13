@@ -18,7 +18,6 @@ class BreedDetailViewModel {
     
     init(fetchBreedImageUseCase: FetchBreedImageUseCase) {
         self.fetchBreedImageUseCase = fetchBreedImageUseCase
-//        fetchBreedImageUseCase.breedId = breed?.id
     }
 }
 

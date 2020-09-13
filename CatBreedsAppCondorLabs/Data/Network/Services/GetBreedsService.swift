@@ -50,6 +50,4 @@ enum GetBreedsService: ServiceProtocol {
     var parametersEncoding: ParametersEncoding {
         return .url
     }
-    
-
 }

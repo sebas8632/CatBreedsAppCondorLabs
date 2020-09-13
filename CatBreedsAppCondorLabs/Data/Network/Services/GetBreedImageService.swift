@@ -10,21 +10,16 @@ import Foundation
 
 enum GetBreedImageService: ServiceProtocol {
    
+    
     case images(id: String)
-    
-    //https://api.thecatapi.com/v1/images/search?breed_id=beng
-    
+    case random
+        
     var baseURL: URL {
         return URL(string: NetworkConstants.baseURL)!
     }
     
     var path: String {
-        switch self {
-      
-        case .images:
-            return "/images/search"
-    
-        }
+        return "/images/search"
     }
     
     var method: HTTPMethod {
@@ -36,7 +31,9 @@ enum GetBreedImageService: ServiceProtocol {
         case  let .images(id):
             let parameters = ["breed_id": id]
             return .requestParameters(parameters)
-        
+            
+        case .random:
+            return .requestPlain
         }
     }
     

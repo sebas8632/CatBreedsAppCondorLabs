@@ -19,6 +19,7 @@ class BreedsListViewModel {
     var errorManagerDelegate: ErrorManagerProtocol?
     
     var breeds: [Breed] = []
+    
     init(fetchBreedsUseCase: FetchBreedsUseCase) {
         self.fetchBreedsUseCase = fetchBreedsUseCase
     }
