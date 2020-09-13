@@ -6,7 +6,7 @@ target 'CatBreedsAppCondorLabs' do
   use_frameworks!
 
   # Pods for CatBreedsAppCondorLabs
-
+	pod 'Kingfisher', '~> 5.15'
   target 'CatBreedsAppCondorLabsTests' do
     inherit! :search_paths
     # Pods for testing

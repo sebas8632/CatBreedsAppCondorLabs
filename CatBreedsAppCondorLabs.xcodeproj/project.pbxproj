@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03609A19042DA2776EA61433 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3392AE79FADEE4B4153721 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework */; };
 		673DD506250DD99A003540A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD505250DD99A003540A4 /* AppDelegate.swift */; };
 		673DD50A250DD99A003540A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD509250DD99A003540A4 /* ViewController.swift */; };
 		673DD50D250DD99A003540A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 673DD50B250DD99A003540A4 /* Main.storyboard */; };
@@ -53,6 +54,9 @@
 		673DD5A3250DED6B003540A4 /* BreedImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A2250DED6B003540A4 /* BreedImagesRepository.swift */; };
 		673DD5A5250DEDAC003540A4 /* FetchBreedImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */; };
 		673DD5A8250DEDFE003540A4 /* DefaultBreedsImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */; };
+		673DD5AB250E838A003540A4 /* ErrorManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */; };
+		E60F39CF7028F990E677C8B6 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */; };
+		EFD54F492E34DC0D0EDA440A /* Pods_CatBreedsAppCondorLabsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBreedsAppCondorLabsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206F6EB95DBDB1A3F46930F8 /* Pods-CatBreedsAppCondorLabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs.debug.xcconfig"; sourceTree = "<group>"; };
+		5F74A55A158CBB1DB1BE720E /* Pods-CatBreedsAppCondorLabsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabsTests.release.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabsTests/Pods-CatBreedsAppCondorLabsTests.release.xcconfig"; sourceTree = "<group>"; };
+		6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBreedsAppCondorLabs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673DD502250DD99A003540A4 /* CatBreedsAppCondorLabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatBreedsAppCondorLabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		673DD505250DD99A003540A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		673DD509250DD99A003540A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +133,12 @@
 		673DD5A2250DED6B003540A4 /* BreedImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesRepository.swift; sourceTree = "<group>"; };
 		673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBreedImageUseCase.swift; sourceTree = "<group>"; };
 		673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBreedsImageRepository.swift; sourceTree = "<group>"; };
+		673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManagerProtocol.swift; sourceTree = "<group>"; };
+		B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabsTests/Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD3392AE79FADEE4B4153721 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEC39D0D119B1B87DFB7B2E7 /* Pods-CatBreedsAppCondorLabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs.release.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs.release.xcconfig"; sourceTree = "<group>"; };
+		EA22F33011CEA18C5691E20B /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.release.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E60F39CF7028F990E677C8B6 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD54F492E34DC0D0EDA440A /* Pods_CatBreedsAppCondorLabsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,12 +162,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03609A19042DA2776EA61433 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B9BC2A460B7BA3AD7652A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				206F6EB95DBDB1A3F46930F8 /* Pods-CatBreedsAppCondorLabs.debug.xcconfig */,
+				DEC39D0D119B1B87DFB7B2E7 /* Pods-CatBreedsAppCondorLabs.release.xcconfig */,
+				C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */,
+				EA22F33011CEA18C5691E20B /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.release.xcconfig */,
+				B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */,
+				5F74A55A158CBB1DB1BE720E /* Pods-CatBreedsAppCondorLabsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		43CCF7983A13CC2CDBD9F282 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */,
+				BD3392AE79FADEE4B4153721 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework */,
+				0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		673DD4F9250DD99A003540A4 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +200,8 @@
 				673DD51B250DD99D003540A4 /* CatBreedsAppCondorLabsTests */,
 				673DD526250DD99D003540A4 /* CatBreedsAppCondorLabsUITests */,
 				673DD503250DD99A003540A4 /* Products */,
+				33B9BC2A460B7BA3AD7652A0 /* Pods */,
+				43CCF7983A13CC2CDBD9F282 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,6 +288,7 @@
 		673DD53A250DDA4F003540A4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5A9250E8370003540A4 /* Utilities */,
 				673DD57C250DE1FF003540A4 /* BreedsScene */,
 				673DD574250DE115003540A4 /* Home */,
 			);
@@ -447,6 +491,7 @@
 			children = (
 				673DD57E250DE20D003540A4 /* BreedsList */,
 				673DD57D250DE206003540A4 /* BreedDetail */,
+				673DD5AC250E94C9003540A4 /* BreedWikipedia */,
 			);
 			path = BreedsScene;
 			sourceTree = "<group>";
@@ -538,6 +583,21 @@
 			path = BreedImagesRepository;
 			sourceTree = "<group>";
 		};
+		673DD5A9250E8370003540A4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		673DD5AC250E94C9003540A4 /* BreedWikipedia */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BreedWikipedia;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -545,9 +605,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 673DD52C250DD99D003540A4 /* Build configuration list for PBXNativeTarget "CatBreedsAppCondorLabs" */;
 			buildPhases = (
+				FC1E18C015ACD0C4E8057766 /* [CP] Check Pods Manifest.lock */,
 				673DD4FE250DD99A003540A4 /* Sources */,
 				673DD4FF250DD99A003540A4 /* Frameworks */,
 				673DD500250DD99A003540A4 /* Resources */,
+				D242C80AAB01B38083BE3574 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -562,6 +624,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 673DD52F250DD99D003540A4 /* Build configuration list for PBXNativeTarget "CatBreedsAppCondorLabsTests" */;
 			buildPhases = (
+				FD0F1B5CB387C0D6B1619F27 /* [CP] Check Pods Manifest.lock */,
 				673DD514250DD99D003540A4 /* Sources */,
 				673DD515250DD99D003540A4 /* Frameworks */,
 				673DD516250DD99D003540A4 /* Resources */,
@@ -580,9 +643,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 673DD532250DD99D003540A4 /* Build configuration list for PBXNativeTarget "CatBreedsAppCondorLabsUITests" */;
 			buildPhases = (
+				348205BF1E75A67456BB7BC9 /* [CP] Check Pods Manifest.lock */,
 				673DD51F250DD99D003540A4 /* Sources */,
 				673DD520250DD99D003540A4 /* Frameworks */,
 				673DD521250DD99D003540A4 /* Resources */,
+				DDBCC635B6321528BEECCA8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -664,6 +729,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		348205BF1E75A67456BB7BC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D242C80AAB01B38083BE3574 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDBCC635B6321528BEECCA8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC1E18C015ACD0C4E8057766 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatBreedsAppCondorLabs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0F1B5CB387C0D6B1619F27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatBreedsAppCondorLabsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		673DD4FE250DD99A003540A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -671,6 +839,7 @@
 			files = (
 				673DD567250DDE34003540A4 /* BreedImage.swift in Sources */,
 				673DD541250DDAFB003540A4 /* Task.swift in Sources */,
+				673DD5AB250E838A003540A4 /* ErrorManagerProtocol.swift in Sources */,
 				673DD54F250DDC0D003540A4 /* NetworkResponse.swift in Sources */,
 				673DD554250DDC63003540A4 /* ProviderProtocol.swift in Sources */,
 				673DD58E250DE3A9003540A4 /* UIViewController+Extension.swift in Sources */,
@@ -880,6 +1049,7 @@
 		};
 		673DD52D250DD99D003540A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206F6EB95DBDB1A3F46930F8 /* Pods-CatBreedsAppCondorLabs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -898,6 +1068,7 @@
 		};
 		673DD52E250DD99D003540A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEC39D0D119B1B87DFB7B2E7 /* Pods-CatBreedsAppCondorLabs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -916,6 +1087,7 @@
 		};
 		673DD530250DD99D003540A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -938,6 +1110,7 @@
 		};
 		673DD531250DD99D003540A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F74A55A158CBB1DB1BE720E /* Pods-CatBreedsAppCondorLabsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -960,6 +1133,7 @@
 		};
 		673DD533250DD99D003540A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -980,6 +1154,7 @@
 		};
 		673DD534250DD99D003540A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA22F33011CEA18C5691E20B /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

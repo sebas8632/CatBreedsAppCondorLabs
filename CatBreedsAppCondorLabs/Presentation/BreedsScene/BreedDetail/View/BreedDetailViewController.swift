@@ -11,7 +11,13 @@ import UIKit
 
 class BreedDetailViewController: UIViewController {
 
-    
+    unowned var breedDetailView: BreedDetailView { return self.view as! BreedDetailView }
+    unowned var breedImage: UIImageView { return breedDetailView.breedImage }
+    unowned var breedNameLabel: UILabel { return breedDetailView.breedNameLabel }
+    unowned var breedOriginLabel: UILabel { return breedDetailView.breedOriginLabel }
+    unowned var breedDescriptionLabel: UILabel { return breedDetailView.descriptionLabel }
+    unowned var wikipediaLabel: UILabel { return breedDetailView.wikiPediaLabel }
+
     var coordinator: BreedDetailCoordinator?
     var viewModel: BreedDetailViewModel?
     
@@ -32,17 +38,13 @@ class BreedDetailViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
 
     }
-    
-    func cerrar() {
-        coordinator?.backToBreedsList()
-    }
-    
         override func loadView() {
             self.view = BreedDetailView(frame: UIScreen.main.bounds)
         }
         
         private func setUpView() {
             self.title = "Breed Detail"
+            
         }
     
     

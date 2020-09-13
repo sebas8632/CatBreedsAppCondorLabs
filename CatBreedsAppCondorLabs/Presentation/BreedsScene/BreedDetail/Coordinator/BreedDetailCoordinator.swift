@@ -8,9 +8,6 @@
 
 import Foundation
 import UIKit
-protocol BackToBreedsListFlow {
-    func backToBreedsList()
-}
 
 class BreedDetailCoordinator: Coordinator {
 
@@ -36,9 +33,3 @@ class BreedDetailCoordinator: Coordinator {
     }
 }
 
-extension BreedDetailCoordinator: BackToBreedsListFlow {
-    
-    func backToBreedsList() {
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-}

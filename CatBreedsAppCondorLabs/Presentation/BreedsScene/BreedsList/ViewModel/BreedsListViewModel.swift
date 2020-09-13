@@ -10,13 +10,13 @@ import Foundation
 
 protocol BreedsListViewModelDelegate {
     func reloadData()
-    func manageError(error: ApplicationError)
 }
 
 class BreedsListViewModel {
     
     var fetchBreedsUseCase: FetchBreedsUseCase
     var delegate: BreedsListViewModelDelegate?
+    var errorManagerDelegate: ErrorManagerProtocol?
     
     var breeds: [Breed] = []
     init(fetchBreedsUseCase: FetchBreedsUseCase) {
@@ -28,14 +28,14 @@ extension BreedsListViewModel {
     
     func getBreeds() {
         self.didFetchBreeds { [weak self] (result) in
-            guard let strongSelf = self, let delegate = strongSelf.delegate else { self?.delegate?.manageError(error: ApplicationError.appError); return}
+            guard let strongSelf = self, let delegate = strongSelf.delegate else { self?.errorManagerDelegate?.manageError(error: ApplicationError.appError); return}
             
             switch result {
             case .success(let breeds):
                 strongSelf.breeds = breeds
                 delegate.reloadData()
             case .failure(let error):
-                delegate.manageError(error: ApplicationError.networkError(networkError: error.localizedDescription))
+                strongSelf.errorManagerDelegate?.manageError(error: ApplicationError.networkError(networkError: error.localizedDescription))
             }
         }
     }

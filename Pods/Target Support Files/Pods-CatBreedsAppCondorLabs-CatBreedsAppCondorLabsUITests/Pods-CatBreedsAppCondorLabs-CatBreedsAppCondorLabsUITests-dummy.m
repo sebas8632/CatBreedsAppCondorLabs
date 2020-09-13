@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests : NSObject
+@end
+@implementation PodsDummy_Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests
+@end

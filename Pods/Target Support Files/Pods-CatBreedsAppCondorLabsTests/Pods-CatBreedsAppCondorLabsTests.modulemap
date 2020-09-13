@@ -1,0 +1,6 @@
+framework module Pods_CatBreedsAppCondorLabsTests {
+  umbrella header "Pods-CatBreedsAppCondorLabsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

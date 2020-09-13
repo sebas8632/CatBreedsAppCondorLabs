@@ -7,11 +7,12 @@
 //
 
 import Foundation
-
+import UIKit
 class BreedDetailViewModel {
     
     private var fetchBreedImageUseCase: FetchBreedImageUseCase
     var breedName: String?
+    var image: UIImageView?
     
     
     init(fetchBreedImageUseCase: FetchBreedImageUseCase) {
@@ -22,7 +23,19 @@ class BreedDetailViewModel {
 
 extension BreedDetailViewModel {
     
-    func fetchBreedImage(completion: @escaping ((Response<BreedImage>)-> Void)) {
+    func getBreedImageURL() {
+        didFetchBreedImage { (result) in
+            switch result {
+            case .success(let breedImage):
+                
+                break
+            case .failure(let error):
+                break
+            }
+        }
+    }
+    
+    func didFetchBreedImage(completion: @escaping ((Response<BreedImage>)-> Void)) {
         fetchBreedImageUseCase.execute(completion: completion)
     }
 }

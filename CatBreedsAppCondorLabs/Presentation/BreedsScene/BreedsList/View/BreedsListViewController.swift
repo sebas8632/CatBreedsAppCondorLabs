@@ -23,6 +23,7 @@ class BreedsListViewController: UIViewController {
         self.breedsListView.tableView.dataSource = self
         self.breedsListView.tableView.delegate = self
         viewModel?.delegate = self
+        viewModel?.errorManagerDelegate = self
         fetchBreeds()
     }
     
@@ -84,7 +85,9 @@ extension BreedsListViewController: BreedsListViewModelDelegate {
             self.hideLoading()
         }
     }
-    
+}
+
+extension BreedsListViewController: ErrorManagerProtocol {
     func manageError(error: ApplicationError) {
         errorManager(error: error)
     }
