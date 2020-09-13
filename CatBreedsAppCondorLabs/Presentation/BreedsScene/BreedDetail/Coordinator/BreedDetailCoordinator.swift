@@ -15,7 +15,7 @@ protocol BreedDetailFlow {
 
 class BreedDetailCoordinator: Coordinator {
 
-    let navigationController: UINavigationController?
+    let navigationController: UINavigationController
     let diContainer: AppDIContainer
     
     var breed: Breed?
@@ -33,14 +33,16 @@ class BreedDetailCoordinator: Coordinator {
         breedDetailViewController.breed = self.breed
         breedDetailViewController.viewModel = diContainer.makeBreedDetailViewModel()
         
-        navigationController?.pushViewController(breedDetailViewController, animated: false)
+        navigationController.pushViewController(breedDetailViewController, animated: false)
     }
 }
 
 
 extension BreedDetailCoordinator: BreedDetailFlow {
     func coordinateToWebView(url: String) {
-        
+        let breedWikipediaCoordinator = BreedWikipediaCoordinator(navigationController: navigationController)
+        breedWikipediaCoordinator.urlWikipedia = url
+        coordinate(to: breedWikipediaCoordinator)
     }
     
     

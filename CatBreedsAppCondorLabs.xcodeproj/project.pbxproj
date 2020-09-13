@@ -57,6 +57,9 @@
 		673DD5AB250E838A003540A4 /* ErrorManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */; };
 		673DD5B1250E97A5003540A4 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5B0250E97A5003540A4 /* ImageProvider.swift */; };
 		673DD5B3250E99ED003540A4 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5B2250E99ED003540A4 /* UIImageView+Extension.swift */; };
+		673DD5B7250EB0A2003540A4 /* BreedWikipediaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5B6250EB0A2003540A4 /* BreedWikipediaCoordinator.swift */; };
+		673DD5B9250EB13F003540A4 /* BreedWikipediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5B8250EB13F003540A4 /* BreedWikipediaViewController.swift */; };
+		673DD5BB250EB150003540A4 /* BreedWikipediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5BA250EB150003540A4 /* BreedWikipediaView.swift */; };
 		E60F39CF7028F990E677C8B6 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */; };
 		EFD54F492E34DC0D0EDA440A /* Pods_CatBreedsAppCondorLabsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */; };
 /* End PBXBuildFile section */
@@ -138,6 +141,9 @@
 		673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManagerProtocol.swift; sourceTree = "<group>"; };
 		673DD5B0250E97A5003540A4 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		673DD5B2250E99ED003540A4 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		673DD5B6250EB0A2003540A4 /* BreedWikipediaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedWikipediaCoordinator.swift; sourceTree = "<group>"; };
+		673DD5B8250EB13F003540A4 /* BreedWikipediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedWikipediaViewController.swift; sourceTree = "<group>"; };
+		673DD5BA250EB150003540A4 /* BreedWikipediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedWikipediaView.swift; sourceTree = "<group>"; };
 		B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabsTests/Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD3392AE79FADEE4B4153721 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -599,6 +605,8 @@
 		673DD5AC250E94C9003540A4 /* BreedWikipedia */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5B5250EB06E003540A4 /* Coordinator */,
+				673DD5B4250EB063003540A4 /* View */,
 			);
 			path = BreedWikipedia;
 			sourceTree = "<group>";
@@ -609,6 +617,23 @@
 				673DD5B0250E97A5003540A4 /* ImageProvider.swift */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		673DD5B4250EB063003540A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5B8250EB13F003540A4 /* BreedWikipediaViewController.swift */,
+				673DD5BA250EB150003540A4 /* BreedWikipediaView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		673DD5B5250EB06E003540A4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5B6250EB0A2003540A4 /* BreedWikipediaCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -864,6 +889,7 @@
 				673DD53D250DDA7C003540A4 /* NetworkConstants.swift in Sources */,
 				673DD56D250DE02C003540A4 /* Coordinator.swift in Sources */,
 				673DD55D250DDD9A003540A4 /* GetBreedsService.swift in Sources */,
+				673DD5B7250EB0A2003540A4 /* BreedWikipediaCoordinator.swift in Sources */,
 				673DD558250DDC8D003540A4 /* URLSessionProvider.swift in Sources */,
 				673DD588250DE2EE003540A4 /* BreedsListViewController.swift in Sources */,
 				673DD50A250DD99A003540A4 /* ViewController.swift in Sources */,
@@ -878,6 +904,7 @@
 				673DD594250DE6BB003540A4 /* UseCase.swift in Sources */,
 				673DD571250DE07B003540A4 /* AppDIContainer.swift in Sources */,
 				673DD579250DE14F003540A4 /* HomeCoordinator.swift in Sources */,
+				673DD5B9250EB13F003540A4 /* BreedWikipediaViewController.swift in Sources */,
 				673DD55F250DDDBE003540A4 /* GetBreedImageService.swift in Sources */,
 				673DD59D250DEBA6003540A4 /* BreedDetailViewController.swift in Sources */,
 				673DD596250DE6DA003540A4 /* FetchBreedsUseCase.swift in Sources */,
@@ -890,6 +917,7 @@
 				673DD57B250DE1BF003540A4 /* HomeTabBarViewController.swift in Sources */,
 				673DD506250DD99A003540A4 /* AppDelegate.swift in Sources */,
 				673DD59B250DEB70003540A4 /* BreedDetailCoordinator.swift in Sources */,
+				673DD5BB250EB150003540A4 /* BreedWikipediaView.swift in Sources */,
 				673DD590250DE408003540A4 /* BreedsListViewModel.swift in Sources */,
 				673DD592250DE672003540A4 /* BreedsRepository.swift in Sources */,
 				673DD552250DDC31003540A4 /* ServiceProtocol.swift in Sources */,

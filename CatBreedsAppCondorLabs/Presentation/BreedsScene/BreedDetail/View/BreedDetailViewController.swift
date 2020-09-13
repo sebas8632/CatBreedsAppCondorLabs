@@ -82,6 +82,7 @@ class BreedDetailViewController: UIViewController {
     @objc func tapFuncion() {
         guard let breed = self.breed, let url = breed.wikipediaUrl else { self.manageError(error: ApplicationError.appError); return}
 
+        self.showLoading()
         coordinator?.coordinateToWebView(url: url)
     }
 }
