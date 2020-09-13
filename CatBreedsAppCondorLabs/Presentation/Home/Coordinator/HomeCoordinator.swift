@@ -27,14 +27,20 @@ class HomeCoordinator: Coordinator {
         breedsListNavigationController.tabBarItem = UITabBarItem(title: "Breeds list", image: UIImage(named: "cat"), selectedImage: UIImage(named: "catFilled"))
        
         let breedListCoordinator = BreedsListCoordinator(navigationController: breedsListNavigationController, diContainer: diContainer)
+        
+        let likesNavigationController = UINavigationController()
+        likesNavigationController.tabBarItem = UITabBarItem(title: "Likes", image: UIImage(named: "heart"), selectedImage: UIImage(named: "heartFilled"))
+        
+        let likesCoordinator = LikesCoordinator(navigationController: likesNavigationController, diContainer: diContainer)
        
         
-        homeTabBarViewController.viewControllers = [breedsListNavigationController]
+        homeTabBarViewController.viewControllers = [breedsListNavigationController, likesNavigationController]
         
         homeTabBarViewController.modalPresentationStyle = .fullScreen
         navigationController.present(homeTabBarViewController, animated: false, completion: nil)
        
         coordinate(to: breedListCoordinator)
+        coordinate(to: likesCoordinator)
         
     }
 }

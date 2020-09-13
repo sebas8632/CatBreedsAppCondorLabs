@@ -75,11 +75,11 @@ class BreedDetailViewController: UIViewController {
     }
 
     private func configTargets() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFuncion))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
         wikipediaLabel.addGestureRecognizer(tap)
     }
     
-    @objc func tapFuncion() {
+    @objc func tapFunction() {
         guard let breed = self.breed, let url = breed.wikipediaUrl else { self.manageError(error: ApplicationError.appError); return}
 
         self.showLoading()
