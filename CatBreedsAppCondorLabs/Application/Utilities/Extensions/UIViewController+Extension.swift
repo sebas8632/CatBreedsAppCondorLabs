@@ -40,9 +40,15 @@ extension UIView {
 }
 
 
-extension UIViewController {
+extension UIViewController: ErrorManagerProtocol {
     
-    func errorManager(error: ApplicationError) {
+    
+    func manageError(error: ApplicationError) {
+        errorManager(error: error)
+    }
+    
+    
+    private func errorManager(error: ApplicationError) {
         DispatchQueue.main.async {
             self.hideLoading()
             let alert = UIAlertController(title: error.localizedDescription, message: "", preferredStyle: .alert)
@@ -53,4 +59,5 @@ extension UIViewController {
         
     }
 }
+
 

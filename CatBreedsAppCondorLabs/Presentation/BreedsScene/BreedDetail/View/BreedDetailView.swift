@@ -142,8 +142,7 @@ class BreedDetailView: UIView {
     
     lazy var breedImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .checkmark
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         return imageView
     }()
     
@@ -173,6 +172,7 @@ class BreedDetailView: UIView {
         label.numberOfLines = 1
         label.textColor = .systemBlue
         label.text = "More info on Wikipedia..."
+        label.isUserInteractionEnabled = true
         
         return label
     }()

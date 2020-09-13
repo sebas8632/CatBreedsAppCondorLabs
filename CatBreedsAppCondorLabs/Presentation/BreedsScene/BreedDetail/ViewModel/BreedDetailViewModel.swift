@@ -11,31 +11,35 @@ import UIKit
 class BreedDetailViewModel {
     
     private var fetchBreedImageUseCase: FetchBreedImageUseCase
-    var breedName: String?
-    var image: UIImageView?
+
+    var breed: Breed?
     
+    var errorManager: ErrorManagerProtocol?
     
     init(fetchBreedImageUseCase: FetchBreedImageUseCase) {
         self.fetchBreedImageUseCase = fetchBreedImageUseCase
-        fetchBreedImageUseCase.breedName = breedName
+//        fetchBreedImageUseCase.breedId = breed?.id
     }
 }
 
 extension BreedDetailViewModel {
     
-    func getBreedImageURL() {
-        didFetchBreedImage { (result) in
+    func getBreedImageURL(completion: @escaping ((_ urlImage: String) -> Void)) {
+        didFetchBreedImage { [weak self] (result) in
+            guard let strongSelf = self, let _ = strongSelf.breed else { self?.errorManager?.manageError(error: ApplicationError.appError); return}
             switch result {
             case .success(let breedImage):
-                
+                completion(breedImage.first!.imageUrl)
                 break
             case .failure(let error):
+                strongSelf.errorManager?.manageError(error: error)
                 break
             }
         }
     }
     
-    func didFetchBreedImage(completion: @escaping ((Response<BreedImage>)-> Void)) {
+   private func didFetchBreedImage(completion: @escaping ((Response<[BreedImage]>)-> Void)) {
+    fetchBreedImageUseCase.breedId = self.breed?.id
         fetchBreedImageUseCase.execute(completion: completion)
     }
 }

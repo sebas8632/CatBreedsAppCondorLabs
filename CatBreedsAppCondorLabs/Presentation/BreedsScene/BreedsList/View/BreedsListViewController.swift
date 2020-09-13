@@ -71,7 +71,7 @@ extension BreedsListViewController: UITableViewDataSource {
 extension BreedsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard  let breeds = viewModel?.breeds else {errorManager(error: ApplicationError.appError); return }
+        guard  let breeds = viewModel?.breeds else {self.manageError(error: ApplicationError.appError); return }
         let breed = breeds[indexPath.row]
         showLoading()
         coordinator?.coordinateToBreedDetail(breed: breed)
@@ -85,12 +85,4 @@ extension BreedsListViewController: BreedsListViewModelDelegate {
             self.hideLoading()
         }
     }
-}
-
-extension BreedsListViewController: ErrorManagerProtocol {
-    func manageError(error: ApplicationError) {
-        errorManager(error: error)
-    }
-    
-    
 }

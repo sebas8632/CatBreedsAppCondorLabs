@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,6 +55,8 @@
 		673DD5A5250DEDAC003540A4 /* FetchBreedImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */; };
 		673DD5A8250DEDFE003540A4 /* DefaultBreedsImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */; };
 		673DD5AB250E838A003540A4 /* ErrorManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */; };
+		673DD5B1250E97A5003540A4 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5B0250E97A5003540A4 /* ImageProvider.swift */; };
+		673DD5B3250E99ED003540A4 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5B2250E99ED003540A4 /* UIImageView+Extension.swift */; };
 		E60F39CF7028F990E677C8B6 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */; };
 		EFD54F492E34DC0D0EDA440A /* Pods_CatBreedsAppCondorLabsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +136,8 @@
 		673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBreedImageUseCase.swift; sourceTree = "<group>"; };
 		673DD5A7250DEDFE003540A4 /* DefaultBreedsImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBreedsImageRepository.swift; sourceTree = "<group>"; };
 		673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManagerProtocol.swift; sourceTree = "<group>"; };
+		673DD5B0250E97A5003540A4 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		673DD5B2250E99ED003540A4 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabsTests/Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD3392AE79FADEE4B4153721 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,7 +183,6 @@
 				B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */,
 				5F74A55A158CBB1DB1BE720E /* Pods-CatBreedsAppCondorLabsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +264,7 @@
 		673DD536250DDA2E003540A4 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5AF250E978C003540A4 /* Images */,
 				673DD53E250DDACB003540A4 /* Network */,
 			);
 			path = Infrastructure;
@@ -449,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				673DD58D250DE3A9003540A4 /* UIViewController+Extension.swift */,
+				673DD5B2250E99ED003540A4 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +601,14 @@
 			children = (
 			);
 			path = BreedWikipedia;
+			sourceTree = "<group>";
+		};
+		673DD5AF250E978C003540A4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5B0250E97A5003540A4 /* ImageProvider.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -839,6 +852,7 @@
 			files = (
 				673DD567250DDE34003540A4 /* BreedImage.swift in Sources */,
 				673DD541250DDAFB003540A4 /* Task.swift in Sources */,
+				673DD5B1250E97A5003540A4 /* ImageProvider.swift in Sources */,
 				673DD5AB250E838A003540A4 /* ErrorManagerProtocol.swift in Sources */,
 				673DD54F250DDC0D003540A4 /* NetworkResponse.swift in Sources */,
 				673DD554250DDC63003540A4 /* ProviderProtocol.swift in Sources */,
@@ -854,6 +868,7 @@
 				673DD588250DE2EE003540A4 /* BreedsListViewController.swift in Sources */,
 				673DD50A250DD99A003540A4 /* ViewController.swift in Sources */,
 				673DD5A8250DEDFE003540A4 /* DefaultBreedsImageRepository.swift in Sources */,
+				673DD5B3250E99ED003540A4 /* UIImageView+Extension.swift in Sources */,
 				673DD5A1250DEBE7003540A4 /* BreedDetailViewModel.swift in Sources */,
 				673DD548250DDB9F003540A4 /* URLComponents+Extension.swift in Sources */,
 				673DD573250DE0BE003540A4 /* ApplicationError.swift in Sources */,

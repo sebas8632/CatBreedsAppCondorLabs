@@ -9,6 +9,6 @@
 import Foundation
 protocol  BreedImagesRepository {
     
-    func getBreedImage(by name: String, completion: @escaping ((NetworkResponse<BreedImage>) -> Void))
+    func getBreedImage(by name: String, completion: @escaping ((NetworkResponse<[BreedImage]>) -> Void))
 
 }

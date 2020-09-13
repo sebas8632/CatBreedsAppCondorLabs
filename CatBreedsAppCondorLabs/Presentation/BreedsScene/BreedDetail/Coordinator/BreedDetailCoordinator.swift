@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol BreedDetailFlow {
+    func coordinateToWebView(url: String)
+}
+
 class BreedDetailCoordinator: Coordinator {
 
     let navigationController: UINavigationController?
@@ -25,11 +29,19 @@ class BreedDetailCoordinator: Coordinator {
     func start() {
         let breedDetailViewController = BreedDetailViewController()
         
-        breedDetailViewController.breed = self.breed
         breedDetailViewController.coordinator = self
+        breedDetailViewController.breed = self.breed
         breedDetailViewController.viewModel = diContainer.makeBreedDetailViewModel()
         
         navigationController?.pushViewController(breedDetailViewController, animated: false)
     }
 }
 
+
+extension BreedDetailCoordinator: BreedDetailFlow {
+    func coordinateToWebView(url: String) {
+        
+    }
+    
+    
+}

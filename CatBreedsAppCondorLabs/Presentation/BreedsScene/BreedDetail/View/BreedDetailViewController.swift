@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class BreedDetailViewController: UIViewController {
 
@@ -25,7 +26,10 @@ class BreedDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideLoading()
         setUpView()
+        configTargets()
+        getBreedImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,6 +51,37 @@ class BreedDetailViewController: UIViewController {
             
         }
     
-    
+    fileprivate func getBreedImage() {
+        guard let breed = self.breed else {self.manageError(error: ApplicationError.appError); return}
+        viewModel?.breed = breed
+        self.showLoading()
+        
+        viewModel?.getBreedImageURL(completion: { [weak self] (urlImage) in
+            DispatchQueue.main.async {
+                self?.bindComponents(breed: breed, urlImage: urlImage)
 
+            }
+
+        })
+    }
+    
+    fileprivate func bindComponents(breed: Breed, urlImage: String) {
+        breedNameLabel.text = breed.name
+        breedOriginLabel.text = breed.origin
+        breedDescriptionLabel.text = breed.description
+        let url = URL(string: urlImage)
+        breedImage.kf.setImage(with: url, placeholder: UIImage(named: ""), options: nil, progressBlock: nil) { (_) in }
+        self.hideLoading()
+    }
+
+    private func configTargets() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFuncion))
+        wikipediaLabel.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapFuncion() {
+        guard let breed = self.breed, let url = breed.wikipediaUrl else { self.manageError(error: ApplicationError.appError); return}
+
+        coordinator?.coordinateToWebView(url: url)
+    }
 }

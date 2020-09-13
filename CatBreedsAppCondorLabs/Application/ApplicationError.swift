@@ -11,6 +11,7 @@ import Foundation
 enum ApplicationError: Error {
     case networkError(networkError: String)
     case appError
+    case infraestructureError(descriptionError: String)
     
     
     var localizedDescription: String {
@@ -19,6 +20,8 @@ enum ApplicationError: Error {
             return "Has occurred an expected error, please try again!"
         case let .networkError(networkError):
             return networkError
+        case let .infraestructureError(descriptionError):
+            return descriptionError
         }
     }
 }

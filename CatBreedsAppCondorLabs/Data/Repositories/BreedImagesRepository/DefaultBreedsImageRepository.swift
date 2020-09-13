@@ -15,7 +15,7 @@ class DefaultBreedsImageRepository: BreedImagesRepository {
         self.sessionProvider = sessionProvider
     }
     
-    func getBreedImage(by name: String, completion: @escaping ((NetworkResponse<BreedImage>) -> Void)) {
-        sessionProvider.request(type: BreedImage.self, service: GetBreedImageService.images(id: name), completion: completion)
+    func getBreedImage(by name: String, completion: @escaping ((NetworkResponse<[BreedImage]>) -> Void)) {
+        sessionProvider.request(type: [BreedImage].self, service: GetBreedImageService.images(id: name), completion: completion)
     }
 }

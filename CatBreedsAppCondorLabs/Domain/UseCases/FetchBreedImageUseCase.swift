@@ -11,7 +11,7 @@ class FetchBreedImageUseCase{
 
     private let breedImageRepository: BreedImagesRepository
     
-    var breedName: String?
+    var breedId: String?
     
     init(breedImageRepository: BreedImagesRepository) {
         self.breedImageRepository = breedImageRepository
@@ -20,7 +20,7 @@ class FetchBreedImageUseCase{
 
 extension FetchBreedImageUseCase: UseCase {
     func execute<T>(completion: @escaping ((Response<T>) -> Void)) {
-        guard let name = self.breedName else {completion(.failure(ApplicationError.appError)); return }
+        guard let name = self.breedId else {completion(.failure(ApplicationError.appError)); return }
         
         breedImageRepository.getBreedImage(by: name) { (result) in
             switch result {
