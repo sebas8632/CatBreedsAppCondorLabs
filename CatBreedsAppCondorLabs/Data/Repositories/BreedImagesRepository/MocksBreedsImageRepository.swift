@@ -24,7 +24,7 @@ class MocksBreedsImageRepository: BreedImagesRepository {
     
     func getBreedsImageRandom(completion: @escaping ((NetworkResponse<[BreedImage]>) -> Void)) {
         let breedImage = BreedImage(id: "abys", imageUrl: "https://cdn2.thecatapi.com/images/387.jpg")
-        let breedImage2 = BreedImage(id: "abys", imageUrl: "https://cdn2.thecatapi.com/images/NwMUoJYmT.jpg")
+        let breedImage2 = BreedImage(id: "aegs", imageUrl: "https://cdn2.thecatapi.com/images/NwMUoJYmT.jpg")
 
         completion(.success([breedImage, breedImage2]))
     }

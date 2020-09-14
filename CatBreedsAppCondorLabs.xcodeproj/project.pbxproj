@@ -13,7 +13,6 @@
 		673DD50D250DD99A003540A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 673DD50B250DD99A003540A4 /* Main.storyboard */; };
 		673DD50F250DD99D003540A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673DD50E250DD99D003540A4 /* Assets.xcassets */; };
 		673DD512250DD99D003540A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 673DD510250DD99D003540A4 /* LaunchScreen.storyboard */; };
-		673DD51D250DD99D003540A4 /* CatBreedsAppCondorLabsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD51C250DD99D003540A4 /* CatBreedsAppCondorLabsTests.swift */; };
 		673DD528250DD99D003540A4 /* CatBreedsAppCondorLabsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD527250DD99D003540A4 /* CatBreedsAppCondorLabsUITests.swift */; };
 		673DD53D250DDA7C003540A4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD53C250DDA7C003540A4 /* NetworkConstants.swift */; };
 		673DD541250DDAFB003540A4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD540250DDAFB003540A4 /* Task.swift */; };
@@ -74,6 +73,10 @@
 		673DD670250F099D003540A4 /* MocksVotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD66F250F099D003540A4 /* MocksVotesRepository.swift */; };
 		673DD672250F0A7A003540A4 /* MocksBreedsImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD671250F0A7A003540A4 /* MocksBreedsImageRepository.swift */; };
 		673DD674250F0B75003540A4 /* MocksBreedsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD673250F0B75003540A4 /* MocksBreedsRepository.swift */; };
+		673DD682250F163D003540A4 /* BreedImagesRandomUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD681250F163D003540A4 /* BreedImagesRandomUseCaseTest.swift */; };
+		673DD684250F1652003540A4 /* BreedImageUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD683250F1652003540A4 /* BreedImageUseCaseTest.swift */; };
+		673DD686250F1674003540A4 /* BreedsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD685250F1674003540A4 /* BreedsUseCaseTest.swift */; };
+		673DD688250F1BF1003540A4 /* SaveVoteUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD687250F1BF1003540A4 /* SaveVoteUseCaseTest.swift */; };
 		CE7D7E008D48E601F3808763 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */; };
 		E60F39CF7028F990E677C8B6 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */; };
 		EFD54F492E34DC0D0EDA440A /* Pods_CatBreedsAppCondorLabsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */; };
@@ -110,7 +113,6 @@
 		673DD511250DD99D003540A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		673DD513250DD99D003540A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		673DD518250DD99D003540A4 /* CatBreedsAppCondorLabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBreedsAppCondorLabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		673DD51C250DD99D003540A4 /* CatBreedsAppCondorLabsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsAppCondorLabsTests.swift; sourceTree = "<group>"; };
 		673DD51E250DD99D003540A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		673DD523250DD99D003540A4 /* CatBreedsAppCondorLabsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBreedsAppCondorLabsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		673DD527250DD99D003540A4 /* CatBreedsAppCondorLabsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsAppCondorLabsUITests.swift; sourceTree = "<group>"; };
@@ -176,6 +178,10 @@
 		673DD66F250F099D003540A4 /* MocksVotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksVotesRepository.swift; sourceTree = "<group>"; };
 		673DD671250F0A7A003540A4 /* MocksBreedsImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksBreedsImageRepository.swift; sourceTree = "<group>"; };
 		673DD673250F0B75003540A4 /* MocksBreedsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksBreedsRepository.swift; sourceTree = "<group>"; };
+		673DD681250F163D003540A4 /* BreedImagesRandomUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesRandomUseCaseTest.swift; sourceTree = "<group>"; };
+		673DD683250F1652003540A4 /* BreedImageUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageUseCaseTest.swift; sourceTree = "<group>"; };
+		673DD685250F1674003540A4 /* BreedsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUseCaseTest.swift; sourceTree = "<group>"; };
+		673DD687250F1BF1003540A4 /* SaveVoteUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVoteUseCaseTest.swift; sourceTree = "<group>"; };
 		71150623985FD0601E629CCA /* Pods-CatBreedsAppCondorLabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs.release.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs.release.xcconfig"; sourceTree = "<group>"; };
 		7E71D53B96ADE877D7F91B7E /* Pods-CatBreedsAppCondorLabsTests.mocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabsTests.mocks.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabsTests/Pods-CatBreedsAppCondorLabsTests.mocks.xcconfig"; sourceTree = "<group>"; };
 		873BA49F81AD1CA277064EA9 /* Pods-CatBreedsAppCondorLabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs/Pods-CatBreedsAppCondorLabs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,7 +290,9 @@
 		673DD51B250DD99D003540A4 /* CatBreedsAppCondorLabsTests */ = {
 			isa = PBXGroup;
 			children = (
-				673DD51C250DD99D003540A4 /* CatBreedsAppCondorLabsTests.swift */,
+				673DD680250F1616003540A4 /* Votes */,
+				673DD67F250F1610003540A4 /* BreedDetail */,
+				673DD67E250F15F2003540A4 /* BreedsListUseCase */,
 				673DD51E250DD99D003540A4 /* Info.plist */,
 			);
 			path = CatBreedsAppCondorLabsTests;
@@ -754,6 +762,31 @@
 			path = Votes;
 			sourceTree = "<group>";
 		};
+		673DD67E250F15F2003540A4 /* BreedsListUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				673DD685250F1674003540A4 /* BreedsUseCaseTest.swift */,
+			);
+			path = BreedsListUseCase;
+			sourceTree = "<group>";
+		};
+		673DD67F250F1610003540A4 /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				673DD683250F1652003540A4 /* BreedImageUseCaseTest.swift */,
+			);
+			path = BreedDetail;
+			sourceTree = "<group>";
+		};
+		673DD680250F1616003540A4 /* Votes */ = {
+			isa = PBXGroup;
+			children = (
+				673DD681250F163D003540A4 /* BreedImagesRandomUseCaseTest.swift */,
+				673DD687250F1BF1003540A4 /* SaveVoteUseCaseTest.swift */,
+			);
+			path = Votes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1061,7 +1094,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				673DD51D250DD99D003540A4 /* CatBreedsAppCondorLabsTests.swift in Sources */,
+				673DD686250F1674003540A4 /* BreedsUseCaseTest.swift in Sources */,
+				673DD688250F1BF1003540A4 /* SaveVoteUseCaseTest.swift in Sources */,
+				673DD682250F163D003540A4 /* BreedImagesRandomUseCaseTest.swift in Sources */,
+				673DD684250F1652003540A4 /* BreedImageUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1410,7 +1446,7 @@
 		};
 		673DD67B250F1284003540A4 /* Mocks */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 873BA49F81AD1CA277064EA9 /* Pods-CatBreedsAppCondorLabs.debug.xcconfig */;
+			baseConfigurationReference = 62F6DF116498636BAA5687E6 /* Pods-CatBreedsAppCondorLabs.mocks.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1429,7 +1465,7 @@
 		};
 		673DD67C250F1284003540A4 /* Mocks */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */;
+			baseConfigurationReference = 7E71D53B96ADE877D7F91B7E /* Pods-CatBreedsAppCondorLabsTests.mocks.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1452,7 +1488,7 @@
 		};
 		673DD67D250F1284003540A4 /* Mocks */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */;
+			baseConfigurationReference = 3104460925178F41922FD7C7 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.mocks.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
