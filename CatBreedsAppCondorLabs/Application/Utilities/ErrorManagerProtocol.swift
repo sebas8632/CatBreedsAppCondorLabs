@@ -10,5 +10,4 @@ import Foundation
 
 protocol ErrorManagerProtocol {
     func manageError(error: ApplicationError)
-
 }

@@ -12,7 +12,7 @@ enum ApplicationError: Error {
     case networkError(networkError: String)
     case appError
     case infraestructureError(descriptionError: String)
-    
+    case domainError(description: String)
     
     var localizedDescription: String {
         switch self {
@@ -22,6 +22,8 @@ enum ApplicationError: Error {
             return networkError
         case let .infraestructureError(descriptionError):
             return descriptionError
+        case .domainError(description: let description):
+            return description
         }
     }
 }

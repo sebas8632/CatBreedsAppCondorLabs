@@ -346,7 +346,6 @@
 		673DD53A250DDA4F003540A4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				673DD5A9250E8370003540A4 /* Utilities */,
 				673DD57C250DE1FF003540A4 /* BreedsScene */,
 				673DD5BC250EB7EC003540A4 /* Likes */,
 				673DD574250DE115003540A4 /* Home */,
@@ -505,6 +504,7 @@
 		673DD56A250DDEA2003540A4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */,
 				673DD56B250DDEDC003540A4 /* Extensions */,
 			);
 			path = Utilities;
@@ -641,14 +641,6 @@
 				673DD671250F0A7A003540A4 /* MocksBreedsImageRepository.swift */,
 			);
 			path = BreedImagesRepository;
-			sourceTree = "<group>";
-		};
-		673DD5A9250E8370003540A4 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				673DD5AA250E838A003540A4 /* ErrorManagerProtocol.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		673DD5AC250E94C9003540A4 /* BreedWikipedia */ = {

@@ -28,7 +28,7 @@ class BreedImageUseCaseTest: XCTestCase {
     }
     
     
-    func testA() {
+    func testGetBreedsImage() {
         
         //Given
         fetchBreedImageUseCase.breedId = "abys"
