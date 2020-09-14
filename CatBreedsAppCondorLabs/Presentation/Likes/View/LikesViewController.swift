@@ -44,11 +44,11 @@ class LikesViewController: UIViewController {
     }
     
     @objc func tapUnlikeAction() {
-        print("UNLIKE")
+        likesViewModel?.vote( vote: .unlike)
     }
     
     @objc func tapLikeAction() {
-        print("LIKE")
+        likesViewModel?.vote( vote: .like)
     }
     
     private func getImages() {
@@ -56,7 +56,6 @@ class LikesViewController: UIViewController {
     }
     
 }
-
 
 extension LikesViewController: LikesViewModelDelegate {
     func showImage(url: String) {

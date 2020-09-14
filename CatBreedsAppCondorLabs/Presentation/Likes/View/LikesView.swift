@@ -80,7 +80,7 @@ class LikesView: UIView {
         let view = UIView()
         view.layer.cornerRadius = 6
         view.clipsToBounds = true
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .white
         return view
         
     }()

@@ -16,29 +16,29 @@ protocol LikesViewModelDelegate {
 class LikesViewModel {
     
     private var fetchBreedImagesRandomUseCase: FetchBreedImagesRandomUseCase
-    
-    var breedsImages: [BreedImage] = []
+    private var saveVoteUseCase: SaveVoteUseCase
     
     var errorManager: ErrorManagerProtocol?
-    
     var delegate: LikesViewModelDelegate?
     
-    init(fetchBreedImagesRandomUseCase: FetchBreedImagesRandomUseCase) {
+    var imageId: String?
+    
+    init(fetchBreedImagesRandomUseCase: FetchBreedImagesRandomUseCase, saveVoteUseCase: SaveVoteUseCase) {
         self.fetchBreedImagesRandomUseCase = fetchBreedImagesRandomUseCase
+        self.saveVoteUseCase = saveVoteUseCase
     }
 }
 
 extension LikesViewModel {
     
     func getImagesRandom() {
-        
         didFetchImagesRandom { [weak self] (result) in
             
             guard let strongSelf = self else { self?.errorManager?.manageError(error: ApplicationError.appError); return}
             
             switch result {
             case .success(let breedsImages):
-                strongSelf.breedsImages = breedsImages
+                strongSelf.imageId = breedsImages.first?.id
                 strongSelf.delegate?.showImage(url: breedsImages.first!.imageUrl)
                 break
             case .failure(let error):
@@ -50,6 +50,29 @@ extension LikesViewModel {
     
     func didFetchImagesRandom(completion: @escaping ((Response<[BreedImage]>)-> Void)) {
         fetchBreedImagesRandomUseCase.execute(completion: completion)
+    }
+    
+    private func saveVote(id: String, vote: VoteEnum, completion: @escaping ((Response<VoteResponse>)-> Void)) {
+        saveVoteUseCase.imageId = id
+        saveVoteUseCase.vote = vote
+        
+        saveVoteUseCase.execute(completion: completion)
+    }
+    
+    func vote( vote: VoteEnum) {
+        saveVote(id: self.imageId!, vote: vote) {[weak self] (result) in
+            
+            guard let strongSelf = self else { self?.errorManager?.manageError(error: ApplicationError.appError); return}
+            switch result {
+                
+            case .success(_):
+                strongSelf.getImagesRandom()
+            case .failure(let error):
+                strongSelf.errorManager?.manageError(error: error)
+                
+                
+            }
+        }
     }
     
 }

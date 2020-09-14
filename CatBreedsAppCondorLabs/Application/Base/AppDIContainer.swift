@@ -69,7 +69,7 @@ extension AppDIContainer {
     //MARK: View Model
     
     func makeLikesViewModel() -> LikesViewModel {
-        return LikesViewModel(fetchBreedImagesRandomUseCase: makeFetchBreedImagesRandomUseCase())
+        return LikesViewModel(fetchBreedImagesRandomUseCase: makeFetchBreedImagesRandomUseCase(), saveVoteUseCase: makeSaveVoteUseCase())
     }
     
     //MARK: Use Cases
@@ -78,5 +78,14 @@ extension AppDIContainer {
         return FetchBreedImagesRandomUseCase(breedImageRepository: makeBreedImageRepository())
     }
     
+    func makeSaveVoteUseCase() -> SaveVoteUseCase {
+        return SaveVoteUseCase(votesRepository: makeVotesRepository())
+    }
+    
+    //MARK: Repository
+
+    func makeVotesRepository() -> VotesRepository {
+        return DefaultVotesRepository(sessionProvider: urlSessionProvider)
+    }
 }
 

@@ -65,6 +65,12 @@
 		673DD5C5250EB911003540A4 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5C4250EB911003540A4 /* LikesView.swift */; };
 		673DD5C7250EB93F003540A4 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5C6250EB93F003540A4 /* LikesViewModel.swift */; };
 		673DD5CB250ECEC5003540A4 /* FetchBreedImagesRandomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5CA250ECEC5003540A4 /* FetchBreedImagesRandomUseCase.swift */; };
+		673DD5CD250EE4CF003540A4 /* PostVoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5CC250EE4CF003540A4 /* PostVoteService.swift */; };
+		673DD5D0250EE674003540A4 /* VoteEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5CF250EE674003540A4 /* VoteEnum.swift */; };
+		673DD5D3250EE776003540A4 /* VotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5D2250EE776003540A4 /* VotesRepository.swift */; };
+		673DD5D5250EE800003540A4 /* DefaultVotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5D4250EE800003540A4 /* DefaultVotesRepository.swift */; };
+		673DD5D7250EE94B003540A4 /* VoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5D6250EE94B003540A4 /* VoteResponse.swift */; };
+		673DD5DC250EEAE8003540A4 /* SaveVoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673DD5DB250EEAE8003540A4 /* SaveVoteUseCase.swift */; };
 		E60F39CF7028F990E677C8B6 /* Pods_CatBreedsAppCondorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6127F92D40D95B7C6BA2EDD2 /* Pods_CatBreedsAppCondorLabs.framework */; };
 		EFD54F492E34DC0D0EDA440A /* Pods_CatBreedsAppCondorLabsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954DCF179FEC798DD8B8A80 /* Pods_CatBreedsAppCondorLabsTests.framework */; };
 /* End PBXBuildFile section */
@@ -154,6 +160,12 @@
 		673DD5C4250EB911003540A4 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
 		673DD5C6250EB93F003540A4 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
 		673DD5CA250ECEC5003540A4 /* FetchBreedImagesRandomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBreedImagesRandomUseCase.swift; sourceTree = "<group>"; };
+		673DD5CC250EE4CF003540A4 /* PostVoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVoteService.swift; sourceTree = "<group>"; };
+		673DD5CF250EE674003540A4 /* VoteEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteEnum.swift; sourceTree = "<group>"; };
+		673DD5D2250EE776003540A4 /* VotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesRepository.swift; sourceTree = "<group>"; };
+		673DD5D4250EE800003540A4 /* DefaultVotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVotesRepository.swift; sourceTree = "<group>"; };
+		673DD5D6250EE94B003540A4 /* VoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResponse.swift; sourceTree = "<group>"; };
+		673DD5DB250EEAE8003540A4 /* SaveVoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVoteUseCase.swift; sourceTree = "<group>"; };
 		B5337106B13B96A46A373CB7 /* Pods-CatBreedsAppCondorLabsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabsTests/Pods-CatBreedsAppCondorLabsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD3392AE79FADEE4B4153721 /* Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBreedsAppCondorLabs_CatBreedsAppCondorLabsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93B1FB0943477BBD01F4DE6 /* Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests/Pods-CatBreedsAppCondorLabs-CatBreedsAppCondorLabsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -388,6 +400,7 @@
 		673DD55A250DDD6C003540A4 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5D1250EE761003540A4 /* VotesRepository */,
 				673DD5A6250DEDE6003540A4 /* BreedImagesRepository */,
 				673DD597250DE721003540A4 /* BreedsRepository */,
 			);
@@ -399,6 +412,7 @@
 			children = (
 				673DD55C250DDD9A003540A4 /* GetBreedsService.swift */,
 				673DD55E250DDDBE003540A4 /* GetBreedImageService.swift */,
+				673DD5CC250EE4CF003540A4 /* PostVoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -414,8 +428,10 @@
 		673DD561250DDDE2003540A4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5CE250EE668003540A4 /* Enums */,
 				673DD564250DDE14003540A4 /* Breed.swift */,
 				673DD566250DDE34003540A4 /* BreedImage.swift */,
+				673DD5D6250EE94B003540A4 /* VoteResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -423,10 +439,10 @@
 		673DD562250DDDE9003540A4 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				673DD5D8250EEA94003540A4 /* BreedsList */,
+				673DD5D9250EEAA2003540A4 /* BreedDetail */,
+				673DD5DA250EEAC5003540A4 /* Votes */,
 				673DD563250DDE00003540A4 /* Protocols */,
-				673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */,
-				673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */,
-				673DD5CA250ECEC5003540A4 /* FetchBreedImagesRandomUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -444,6 +460,7 @@
 			children = (
 				673DD591250DE672003540A4 /* BreedsRepository.swift */,
 				673DD5A2250DED6B003540A4 /* BreedImagesRepository.swift */,
+				673DD5D2250EE776003540A4 /* VotesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -673,6 +690,47 @@
 				673DD5C6250EB93F003540A4 /* LikesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		673DD5CE250EE668003540A4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5CF250EE674003540A4 /* VoteEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		673DD5D1250EE761003540A4 /* VotesRepository */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5D4250EE800003540A4 /* DefaultVotesRepository.swift */,
+			);
+			path = VotesRepository;
+			sourceTree = "<group>";
+		};
+		673DD5D8250EEA94003540A4 /* BreedsList */ = {
+			isa = PBXGroup;
+			children = (
+				673DD595250DE6DA003540A4 /* FetchBreedsUseCase.swift */,
+			);
+			path = BreedsList;
+			sourceTree = "<group>";
+		};
+		673DD5D9250EEAA2003540A4 /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5A4250DEDAC003540A4 /* FetchBreedImageUseCase.swift */,
+			);
+			path = BreedDetail;
+			sourceTree = "<group>";
+		};
+		673DD5DA250EEAC5003540A4 /* Votes */ = {
+			isa = PBXGroup;
+			children = (
+				673DD5CA250ECEC5003540A4 /* FetchBreedImagesRandomUseCase.swift */,
+				673DD5DB250EEAE8003540A4 /* SaveVoteUseCase.swift */,
+			);
+			path = Votes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -914,10 +972,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673DD5D0250EE674003540A4 /* VoteEnum.swift in Sources */,
 				673DD567250DDE34003540A4 /* BreedImage.swift in Sources */,
 				673DD541250DDAFB003540A4 /* Task.swift in Sources */,
 				673DD5B1250E97A5003540A4 /* ImageProvider.swift in Sources */,
 				673DD5AB250E838A003540A4 /* ErrorManagerProtocol.swift in Sources */,
+				673DD5D5250EE800003540A4 /* DefaultVotesRepository.swift in Sources */,
+				673DD5DC250EEAE8003540A4 /* SaveVoteUseCase.swift in Sources */,
 				673DD54F250DDC0D003540A4 /* NetworkResponse.swift in Sources */,
 				673DD554250DDC63003540A4 /* ProviderProtocol.swift in Sources */,
 				673DD58E250DE3A9003540A4 /* UIViewController+Extension.swift in Sources */,
@@ -942,9 +1003,11 @@
 				673DD56F250DE050003540A4 /* AppCoordinator.swift in Sources */,
 				673DD556250DDC76003540A4 /* URLSessionProtocol.swift in Sources */,
 				673DD594250DE6BB003540A4 /* UseCase.swift in Sources */,
+				673DD5D7250EE94B003540A4 /* VoteResponse.swift in Sources */,
 				673DD571250DE07B003540A4 /* AppDIContainer.swift in Sources */,
 				673DD5C7250EB93F003540A4 /* LikesViewModel.swift in Sources */,
 				673DD5C3250EB8FC003540A4 /* LikesViewController.swift in Sources */,
+				673DD5CD250EE4CF003540A4 /* PostVoteService.swift in Sources */,
 				673DD579250DE14F003540A4 /* HomeCoordinator.swift in Sources */,
 				673DD5C1250EB826003540A4 /* LikesCoordinator.swift in Sources */,
 				673DD5B9250EB13F003540A4 /* BreedWikipediaViewController.swift in Sources */,
@@ -955,6 +1018,7 @@
 				673DD58A250DE313003540A4 /* BreedsListView.swift in Sources */,
 				673DD58C250DE350003540A4 /* BreedTableViewCell.swift in Sources */,
 				673DD54D250DDBF3003540A4 /* NetworkError.swift in Sources */,
+				673DD5D3250EE776003540A4 /* VotesRepository.swift in Sources */,
 				673DD545250DDB56003540A4 /* ParametersEncoding.swift in Sources */,
 				673DD5CB250ECEC5003540A4 /* FetchBreedImagesRandomUseCase.swift in Sources */,
 				673DD565250DDE14003540A4 /* Breed.swift in Sources */,
