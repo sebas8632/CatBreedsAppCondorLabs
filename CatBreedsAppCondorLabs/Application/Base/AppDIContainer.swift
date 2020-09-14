@@ -30,12 +30,6 @@ extension AppDIContainer {
     func makeFetchBreedsUseCase() -> FetchBreedsUseCase {
         return FetchBreedsUseCase(breedsRepository: makeBreedsRepository())
     }
-    
-    //MARK: Repositories
-    
-    func makeBreedsRepository() -> BreedsRepository {
-        return DefaultBreedsRepository(sessionProvider: urlSessionProvider)
-    }
 }
 
 //MARK: BreedsDetail Container
@@ -52,12 +46,6 @@ extension AppDIContainer {
     
     func makeFetchBreedImageUseCase() -> FetchBreedImageUseCase {
         return FetchBreedImageUseCase(breedImageRepository: makeBreedImageRepository())
-    }
-    
-    //MARK: Repository
-    
-    func makeBreedImageRepository() -> BreedImagesRepository {
-        return DefaultBreedsImageRepository(sessionProvider: urlSessionProvider)
     }
     
 }
@@ -82,10 +70,43 @@ extension AppDIContainer {
         return SaveVoteUseCase(votesRepository: makeVotesRepository())
     }
     
-    //MARK: Repository
 
+}
+
+
+extension AppDIContainer {
+    
+    //MARK: Real Repositories
+    
+
+    #if MOCKS
+    
+    func makeVotesRepository() -> VotesRepository {
+        return MocksVotesRepository()
+    }
+    
+    func makeBreedImageRepository() -> BreedImagesRepository {
+        return MocksBreedsImageRepository()
+    }
+    
+    func makeBreedsRepository() -> BreedsRepository {
+        return MocksBreedsRepository()
+    }
+    
+    #else
+    
     func makeVotesRepository() -> VotesRepository {
         return DefaultVotesRepository(sessionProvider: urlSessionProvider)
     }
+    
+    func makeBreedImageRepository() -> BreedImagesRepository {
+        return DefaultBreedsImageRepository(sessionProvider: urlSessionProvider)
+    }
+    
+    func makeBreedsRepository() -> BreedsRepository {
+        return DefaultBreedsRepository(sessionProvider: urlSessionProvider)
+    }
+    
+    #endif
+    
 }
-

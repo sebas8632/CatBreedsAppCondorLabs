@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CatBreedsAppCondorLabs-mocks.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>CatBreedsAppCondorLabs.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -17,7 +22,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>673DD517250DD99D003540A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>673DD522250DD99D003540A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>673DD5DD250F06FD003540A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>673DD626250F0723003540A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
